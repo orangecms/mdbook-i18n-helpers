@@ -31,5 +31,6 @@ jobs:
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
           bin: "mdbook-gettext,mdbook-i18n-normalize,mdbook-xgettext"
+          archive: $tag-$target
           target: ${{ matrix.target }}
           token: ${{ secrets.GITHUB_TOKEN }}
